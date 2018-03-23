@@ -1,57 +1,55 @@
-package lineastelefonicas;
+package coursera;
 
 public class lineaTelefonica {
-//Atribudos
+	// Atribudos
 	private double costoLlamadas;
 	private int numeroLlamadas;
 	private int numeroMinutos;
 
-	//Metodos
-	
+	// Metodos
+
 	public void inicializar() {
-		costoLlamadas=0.0;
-		numeroLlamadas=0;
-		numeroMinutos=0;
+		costoLlamadas = 0.0;
+		numeroLlamadas = 0;
+		numeroMinutos = 0;
 	}
-	
+
 	public void reiniciard() {
-		costoLlamadas=0.0;
-		numeroLlamadas=0;
-		numeroMinutos=0;
+		inicializar();
 	}
-	
-	
+
 	public double darCostoLlamadas() {
-		
-		 return costoLlamadas;
+
+		return costoLlamadas;
 	}
-	
+
 	public int darNumeroLlamadas() {
-		
-		 return numeroLlamadas;
+
+		return numeroLlamadas;
 	}
-	
+
 	public int darNumeroMinutos() {
-		
-		 return numeroMinutos;
+
+		return numeroMinutos;
 	}
-	
-	public void agregarLlamadaLargaDistancia( int minutos) {
+
+	public void agregarLlamadaLargaDistancia(int minutos) {
 		numeroLlamadas++;
-		numeroMinutos=numeroMinutos + minutos;
-		costoLlamadas = costoLlamadas + (numeroMinutos*380);
+		numeroMinutos += minutos;
+		costoLlamadas += (numeroMinutos * 380);
 	}
-	
-	public void agregarLlamadaCelular( int minutos) {
+
+	public void agregarLlamadaCelular(int minutos) {
 		numeroLlamadas++;
-		numeroMinutos=numeroMinutos + minutos;
-		costoLlamadas = costoLlamadas + (numeroMinutos*100);
+		numeroMinutos += minutos;
+		costoLlamadas += (numeroMinutos * 999);
 	}
 
 	public void agregarLlamadalocal(int minutos) {
 		numeroLlamadas++;
-		numeroMinutos=numeroMinutos + minutos;
-		costoLlamadas = costoLlamadas + (numeroMinutos*20);
-		
+		numeroMinutos += minutos;
+		costoLlamadas += (numeroMinutos * 35);
+
 	}
+
 }
